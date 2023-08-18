@@ -32,7 +32,9 @@ class TaskList{
             if(task.id = id){
                 task.status = !task.status;
             }
+            console.log(task.status);
         })
+        
 
       
     }
@@ -96,6 +98,14 @@ function deleteTask(id){
 }
 
 function editTask() {
+    let edit= '';
+    editTask = id
+
+    taskPost.tasks.forEach(task =>{
+        if(task.id == id){
+            edit = task;
+        }
+    })
     document.getElementById('newtask').value = taskPost.editTask();
    
 }
@@ -115,4 +125,6 @@ function doneTask(id){
         done.status = true;
     }
    
+   
 }
+
